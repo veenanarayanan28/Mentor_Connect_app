@@ -1,0 +1,7 @@
+streamlit==1.45.1
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+networkx
