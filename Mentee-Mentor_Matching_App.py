@@ -1,9 +1,14 @@
-import streamlit as st
 
-st.title("Mentee-Mentor Matching App")
+
+import streamlit as st
+import pandas as pd
+
+# Load mentee dataframe
+mentee_df = pd.read_csv('mentee_database.csv', delimiter=';')
 
 interest = st.selectbox('Select Interest Field', mentee_df['Mentee_InterestField'].unique())
 location = st.selectbox('Select Location', mentee_df['Mentee_Location'].unique())
+
 burnout = st.slider('Burnout Risk Score', 0.0, 10.0, 3.0)
 
 if st.button('Find Mentors'):
